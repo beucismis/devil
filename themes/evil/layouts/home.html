@@ -1,9 +1,12 @@
 {{ define "main" }}
 {{ .Content }}
 {{ range site.RegularPages }}
-<h2>
-    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-</h2>
-{{ .Summary }}
+<div class="home-post-header">
+    <h2 class="home-post-title">
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    </h2>
+    <div class="home-post-date">{{ .Date | time.Format "Jan 02, 2006" }}</div>
+</div>
+<div class="home-post-summary">{{ .Summary | plainify | truncate 75 }}</div>
 {{ end }}
 {{ end }}
