@@ -1,11 +1,11 @@
 {{ define "main" }}
-{{ .Content }}
+<div>{{ .Content }}</div>
 {{ range site.RegularPages }}
 <div class="home-post-header">
     <h2 class="home-post-title">
         <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
     </h2>
-    <div class="home-post-date">{{ .Date | time.Format "Jan 02, 2006" }}</div>
+    <div class="home-post-date">{{ .Date | time.Format "02 Jan, 2006" }}</div>
 </div>
 <div class="home-post-summary">{{ .Summary | plainify | truncate 75 }}</div>
 {{ end }}

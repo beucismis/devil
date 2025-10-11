@@ -17,22 +17,31 @@
 }
 
 html {
-    color: var(--main-fg);
-    font-family: "Space Mono", monospace;
     font-weight: 400;
     font-style: normal;
+    color: var(--main-fg);
     background-color: var(--main-bg);
+    font-family: "Space Mono", monospace;
+}
+
+ul {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+li {
+    position: relative;
 }
 
 header {
     padding-top: 1rem;
-    padding-bottom: 1rem;
     text-align: center;
+    padding-bottom: 2rem;
 }
 
-nav ul {
+.nav-items {
     margin: 0;
-    gap: 20px;
+    gap: 1rem;
     padding: 0;
     display: flex;
     padding-top: 1rem;
@@ -89,6 +98,88 @@ footer {
 }
 
 .home-post-date {
-    font-size: 0.9rem;
+    opacity: 0.5;
+    font-size: 0.8rem;
     white-space: nowrap;
+}
+
+.post-content {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.post-meta {
+    opacity: 0.5;
+}
+
+.toc-title {
+    margin-top: 1rem;
+}
+
+.toc {
+    padding: 0.5rem;
+    background-color: var(--post-bg);
+}
+
+#TableOfContents ul {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+#TableOfContents li {
+    position: relative;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    margin-top: 1rem;
+}
+
+.post-content p {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+    margin-top: 0;
+}
+
+div.highlight {
+    margin: 1em 0;
+    overflow: hidden;
+    position: relative;
+}
+
+div.highlight pre {
+    margin: 0;
+    padding: 1em;
+    overflow-x: auto;
+    line-height: 1.5;
+}
+
+div.highlight::after {
+    top: 0;
+    right: 0;
+    padding: 0.2rem;
+    display: block;
+    position: absolute;
+    content: attr(data-lang);
+    background-color: var(--post-bg);
+}
+
+.archive-year {
+    margin-top: 1rem;
+}
+
+.tags-title {
+    margin-bottom: 1rem;
 }

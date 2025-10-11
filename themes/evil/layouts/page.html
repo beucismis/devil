@@ -1,8 +1,14 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-{{ $dateHuman := .Date | time.Format ":date_long" }}
-<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-{{ .Content }}
+<h1 class="post-title">{{ .Title }}</h1>
+<p class="post-meta">
+    {{ .Date.Format "02 Jan, 2006" }} •
+    {{ .WordCount }} Words •
+    {{ .ReadingTime }} Minute Read
+</p>
+<details>
+    <summary class="toc-title">Table of Contents</summary>
+    <div class="toc">{{ .TableOfContents }}</div>
+</details>
+<div class="post-content">{{ .Content }}</div>
 {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}
