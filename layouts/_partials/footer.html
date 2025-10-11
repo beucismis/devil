@@ -1,1 +1,9 @@
+<div class="social-icons">
+    {{ range .Site.Params.social }}
+    <a href="{{ .url }}"
+       target="_blank"
+       rel="noopener noreferrer"
+       title="{{ .name }}">{{ .name }}</a>
+    {{ end }}
+</div>
 <p>Copyright {{ now.Year }}. All rights reserved.</p>

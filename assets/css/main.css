@@ -69,6 +69,7 @@ main {
 
 footer {
     margin-top: 1rem;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
@@ -133,7 +134,13 @@ th {
 
 .post-content {
     margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
+}
+
+.post-nav {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: 0.1rem solid var(--border);
 }
 
 .post-meta {
@@ -190,7 +197,8 @@ h6 + p {
     margin-bottom: 0.5rem;
 }
 
-.tags-title {
+.tags-title,
+.term-title {
     margin-bottom: 1rem;
 }
 
@@ -258,4 +266,15 @@ blockquote {
 #callout.Tip {
     background-color: var(--post-bg);
     border-color: var(--border);
+}
+
+.social-icons {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
