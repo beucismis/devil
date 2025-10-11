@@ -1,0 +1,13 @@
+name = "evil"
+description = "Simple blog theme for Hugo"
+homepage = "https://github.com/beucismis/evil"
+demosite = "https://beucismis.github.io/evil"
+license = "GNU General Public License v3.0"
+licenselink = "https://github.com/beucismis/evil/blob/main/LICENSE.txt"
+tags = []
+features = []
+min_version = "0.151.0"
+
+[author]
+  name = "beucismis"
+  homepage = "https://github.com/beucismis"
