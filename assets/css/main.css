@@ -24,7 +24,8 @@ html {
     font-family: "Space Mono", monospace;
 }
 
-ul {
+ul,
+ol {
     margin: 0;
     padding-left: 1rem;
 }
@@ -37,6 +38,13 @@ header {
     padding-top: 1rem;
     text-align: center;
     padding-bottom: 2rem;
+}
+
+code {
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 .nav-items {
@@ -62,6 +70,26 @@ main {
 footer {
     margin-top: 1rem;
     text-align: center;
+}
+
+table {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-collapse: collapse;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--post-bg);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--post-bg);
+}
+
+td,
+th {
+    padding: 0.5rem;
+    border: 1px solid var(--border);
 }
 
 .container {
@@ -113,7 +141,7 @@ footer {
 }
 
 .toc-title {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .toc {
@@ -153,33 +181,81 @@ h6 + p {
     margin-top: 0;
 }
 
-div.highlight {
-    margin: 1em 0;
-    overflow: hidden;
-    position: relative;
-}
-
-div.highlight pre {
-    margin: 0;
-    padding: 1em;
-    overflow-x: auto;
-    line-height: 1.5;
-}
-
-div.highlight::after {
-    top: 0;
-    right: 0;
-    padding: 0.2rem;
-    display: block;
-    position: absolute;
-    content: attr(data-lang);
-    background-color: var(--post-bg);
-}
-
 .archive-year {
     margin-top: 1rem;
 }
 
+.tags {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 .tags-title {
     margin-bottom: 1rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.codeblock {
+    max-width: fit-content;
+    padding: 0.2rem;
+    margin-top: 0.2rem;
+}
+
+.codeblock,
+code,
+pre {
+    background-color: var(--post-bg);
+}
+
+pre {
+    margin: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.highlight {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    background-color: var(--post-bg);
+    overflow-x: auto;
+
+    * {
+        background-color: var(--post-bg) !important;
+    }
+
+    span[style*="background-color"] {
+        background-color: var(--post-bg) !important;
+    }
+    span[style*="background-color"] span {
+        background-color: var(--post-bg) !important;
+    }
+}
+
+.codeblock-type {
+    padding: 0.1rem;
+}
+
+#callout,
+blockquote {
+    margin: 0;
+    padding: 0.1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: var(--post-bg);
+    border: 0.1rem solid var(--border);
+    border-left: 0.3rem solid var(--border);
+}
+
+blockquote {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#callout.Tip {
+    background-color: var(--post-bg);
+    border-color: var(--border);
 }

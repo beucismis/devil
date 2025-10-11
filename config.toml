@@ -1,0 +1,28 @@
+[sitemap]
+changefreq = 'weekly'
+filename = 'sitemap.xml'
+priority = 0.5
+
+[markup]
+    [markup.highlight]
+    style = 'github-dark'
+    lineNos = true
+    lineNumbersInTable = false
+
+    [markup.tableOfContents]
+    endLevel = 6
+    ordered = false
+    startLevel = 1
+
+    [markup.goldmark]
+        [markup.goldmark.extensions]
+            [markup.goldmark.extensions.passthrough]
+                enable = true
+            [markup.goldmark.extensions.passthrough.delimiters]
+                block = [['\[', '\]'], ['$$', '$$']]
+                inline = [['\(', '\)']]
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = '0.151.0'

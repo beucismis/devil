@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="term-page">
+    <h1 class="term-title">Tag: #{{ .Title }}</h1>
+    <div class="term-description">{{ .Content }}</div>
+    <ul class="post-list">
+        {{ range .Pages }}
+        <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <span class="post-date">{{ .Date.Format "02 Jan, 2006" }}</span>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}

@@ -5,10 +5,12 @@
     {{ .WordCount }} Words <span style="opacity: 1;">•</span>
     {{ .ReadingTime }} Minute Read
 </p>
+{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+{{ if .TableOfContents }}
 <details>
     <summary class="toc-title">Table of Contents</summary>
     <div class="toc">{{ .TableOfContents }}</div>
 </details>
+{{ end }}
 <div class="post-content">{{ .Content }}</div>
-{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}
