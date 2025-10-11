@@ -2,6 +2,7 @@
     --main-fg: #f1f3f4;
     --main-bg: #07080d;
     --post-bg: #161616;
+    --post-title-fg: #29ffff;
     --link-fg: #ff5c53;
     --border: #3c4043;
     --button-bg: #333333;
@@ -39,7 +40,7 @@ li {
 }
 
 img {
-    border: 0.1rem solid var(--link-fg);
+    border: 0.2rem solid var(--link-fg);
 }
 
 header {
@@ -194,6 +195,15 @@ h4 + p,
 h5 + p,
 h6 + p {
     margin-top: 0;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    color: var(--post-title-fg);
 }
 
 .archive-year {
