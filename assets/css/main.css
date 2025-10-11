@@ -24,6 +24,10 @@ html {
     font-family: "Space Mono", monospace;
 }
 
+a {
+    color: var(--link-fg);
+}
+
 ul,
 ol {
     margin: 0;
@@ -32,6 +36,10 @@ ol {
 
 li {
     position: relative;
+}
+
+img {
+    border: 0.1rem solid var(--link-fg);
 }
 
 header {
@@ -207,10 +215,15 @@ img {
     max-width: 100%;
 }
 
+code {
+    font-size: 15px;
+    font-family: monospace;
+}
+
 .codeblock {
-    max-width: fit-content;
     padding: 0.2rem;
     margin-top: 0.2rem;
+    max-width: fit-content;
 }
 
 .codeblock,
