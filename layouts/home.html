@@ -1,6 +1,6 @@
 {{ define "main" }}
-<div>{{ .Content }}</div>
-{{ range site.RegularPages }}
+{{ $postSection := .Site.GetPage "posts" }}
+{{ range $postSection.Pages.ByDate.Reverse }}
 <div class="home-post-header">
     <h2 class="home-post-title">
         <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>

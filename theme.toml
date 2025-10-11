@@ -1,9 +1,9 @@
-name = "evil"
+name = "devil"
 description = "Simple blog theme for Hugo"
-homepage = "https://github.com/beucismis/evil"
-demosite = "https://beucismis.github.io/evil"
+homepage = "https://github.com/beucismis/devil"
+demosite = "https://beucismis.github.io/devil"
 license = "GNU General Public License v3.0"
-licenselink = "https://github.com/beucismis/evil/blob/main/LICENSE.txt"
+licenselink = "https://github.com/beucismis/devil/blob/main/LICENSE.txt"
 tags = []
 features = []
 min_version = "0.151.0"
