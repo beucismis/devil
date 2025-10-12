@@ -1,0 +1,54 @@
+{{- $galleryDir := .Get "gallery_dir" -}}
+{{- $files := readDir (print "static" $galleryDir) -}}
+{{- if not $files -}}
+<p>Image not found.</p>
+{{- else -}}
+<style>
+.masonry-columns-gallery {
+  column-count: 3;
+  padding: 15px 0;
+  column-gap: 15px;
+}
+
+.gallery-column-item {
+  width: 100%;
+  margin-bottom: 15px;
+  break-inside: avoid;
+  display: inline-block;
+}
+
+.gallery-column-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .masonry-columns-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .masonry-columns-gallery {
+    column-count: 1;
+  }
+}
+</style>
+<div class="masonry-columns-gallery">
+    {{- range $files }}
+    {{- if not .IsDir }}
+    {{- $imageURL := printf "%s/%s" $galleryDir .Name | absURL -}}
+    {{- $imagetitle := .Name | replaceRE `\..*$` "" | humanize -}}
+    <div class="gallery-column-item">
+        <a href="{{ $imageURL }}"
+           title="{{ $imagetitle }}"
+           class="lightbox-image"
+           data-lightbox="gallery-{{ $galleryDir | urlize }}">
+            <img src="{{ $imageURL }}" alt="{{ $imagetitle }}" loading="lazy">
+        </a>
+    </div>
+    {{- end }}
+    {{- end }}
+</div>
+{{- end }}
