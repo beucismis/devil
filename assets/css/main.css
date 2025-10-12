@@ -295,6 +295,17 @@ blockquote {
     margin-bottom: 1rem;
 }
 
+.reading-progress-bar {
+    top: 0;
+    left: 0;
+    width: 0%;
+    z-index: 9999;
+    height: 0.1rem;
+    position: fixed;
+    background-color: var(--link-fg);
+    transition: width 0.1s ease-out;
+}
+
 @media (max-width: 768px) {
     .container {
         margin-left: 1rem;
