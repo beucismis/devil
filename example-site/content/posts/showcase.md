@@ -1,9 +1,7 @@
 +++
 title = "Showcase"
 date = "2025-10-01"
-description = "Sample article showcasing basic styling and formatting for HTML elements."
-tags = ["example", "test", "showcase"]
-author = "Hugo Authors"
+tags = ["showcase"]
 +++
 
 
