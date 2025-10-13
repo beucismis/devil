@@ -72,7 +72,7 @@ Using `~~two tildes~~` will strikethrough:  ~~two tildes~~
 
 ### Markdown in blockquotes
 
-```
+```markdown
 > **Markdown** can be used *inside quotes*
 >
 > 1.   This is the first list item.
@@ -141,7 +141,7 @@ Cant be marked with `-`, `+` or `*`
 
 Incrementation is automatic, you can simply use `1.` everywhere
 
-```
+```markdown
 1. First item
 1. Second item
 1. Third item
@@ -157,7 +157,7 @@ Incrementation is automatic, you can simply use `1.` everywhere
 
 ### Nested list
 
-```
+```markdown
 - First item
 - Second item
 - Third item
@@ -184,7 +184,7 @@ But, if you **leave a blank line between them**, they will split into two paragr
 
 **Demonstration**:
 
-```
+```markdown
 This text is a paragraph.
 This won't be another paragraph, it will join the line above it.
 
@@ -201,7 +201,7 @@ This will be another paragraph, as it has a blank line above it.
 
 To force a line break, **end a line with two or more whitespaces**, and then type return.
 
-```
+```markdown
 This is the first line.··
 Second line
 ```
@@ -215,7 +215,7 @@ Second line
 
 Can be inserted with four `*`, `-` or `_`
 
-```
+```plaintext
 ----
 
 ****
@@ -239,7 +239,7 @@ ____
 
 ### Basic links
 
-```
+```markdown
 [Semantic description](https://roneo.org/markdown)
 <address@example.com>
 <https://roneo.org/markdown> works too. Must be used for explicit links.
@@ -254,7 +254,7 @@ ____
 
 ### Links using text reference
 
-```
+```markdown
 [I'm a link][Reference text]
 
 [This link] will do the same as well. It works as the identifier itself.
@@ -279,7 +279,7 @@ ____
 
 ### Link with a title on hover
 
-```
+```markdown
 [Random text][random-identifier].
 Hover the mouse over it to see the title.
 
@@ -347,7 +347,7 @@ Create a code block with three backticks `` ``` `` before and after your block o
 **Output:**
 
 
-```
+```bash
 sudo apt hello
 cat /etc/apt/sources.list
 ```
@@ -447,8 +447,8 @@ Markdown provides backslash escapes for the following characters:
 
 ### Basic syntax
 
-``` markdown
-  ![Semantic description of the image](https://roneo.org/img/ok.png)
+```markdown
+![Semantic description of the image](https://roneo.org/img/ok.png)
 ```
 
 ![Semantic description of the image](https://roneo.org/img/ok.png)
@@ -463,7 +463,7 @@ In addition to the accessibility benefits, `ALT` is useful for SEO. It's also di
 
 ### Image with title and caption
 
-```
+```markdown
 ![Semantic description](https://roneo.org/img/ok.png "Your title")*Your caption*
 ```
 
@@ -474,7 +474,7 @@ In addition to the accessibility benefits, `ALT` is useful for SEO. It's also di
 
 For clickable images, simply wrap the image markup into a [link markup](#links):
 
-```
+```markdown
 [![Semantic description](https://roneo.org/img/ok.png "Your title")](http://jamstack.club)
 ```
 
@@ -488,7 +488,7 @@ For clickable images, simply wrap the image markup into a [link markup](#links):
 
 You can call the image with an identifier as we do for [links](#links)
 
-```
+```markdown
 ![Semantic desc.][image identifier]
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit [...]
@@ -503,7 +503,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit [...]
 
 ## Task lists
 
-```
+```markdown
 - [X] Write the press release
 - [ ] Update the website
 ```
@@ -518,20 +518,26 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit [...]
 ## Tables
 
 
-```
+```markdown
 | Syntax    | Description |
 | --------- | ----------- |
 | Header    | Title       |
+| Paragraph | Text        |
+| Paragraph | Text        |
+| Paragraph | Text        |
 | Paragraph | Text        |
 ```
 
 or
 
-```
+```markdown
 | Syntax | Description |
 | - | --- |
 | Header | Title |
-| Paragraph | Text|
+| Paragraph | Text |
+| Paragraph | Text |
+| Paragraph | Text |
+| Paragraph | Text |
 ```
 
 will render the same way:
@@ -539,13 +545,16 @@ will render the same way:
 | Syntax | Description |
 | - | --- |
 | Header | Title |
-| Paragraph | Text|
+| Paragraph | Text |
+| Paragraph | Text |
+| Paragraph | Text |
+| Paragraph | Text |
 
 
 ### Text alignment in tables
 
 
-```
+```markdown
 | Syntax    | Description |   Test Text |
 | :-------- | :---------: | ----------: |
 | Header    |    Title    | Here's this |
@@ -563,7 +572,7 @@ See the way the text is aligned, depending on the position of `':'`
 
 ## Footnotes
 
-```
+```markdown
 Here's a sentence with a footnote[^1].
 (see the result at the bottom of the page)
 
@@ -579,7 +588,7 @@ Here's a sentence with a footnote[^1].
 
 ### Long footnote
 
-```
+```markdown
 Here's a longer one.[^bignote]
 (see the result at the bottom of the page)
 
@@ -610,7 +619,7 @@ Here's a longer one.[^bignote]
 ## Definition List
 
 
-```
+```markdown
 term
 : definition
 
@@ -639,7 +648,7 @@ Add `##` at the beginning of a line to set as Heading.
 You can use up to 6 `#` symbols for the corresponding Heading levels
 
 
-```
+```markdown
 ## Heading 1
 [...]
 
