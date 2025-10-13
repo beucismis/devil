@@ -48,7 +48,7 @@ img {
 }
 
 header {
-    padding-top: 1rem;
+    padding-top: 2rem;
     text-align: center;
     padding-bottom: 2rem;
 }
@@ -88,22 +88,22 @@ main {
 
 footer {
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
 table {
+    width: 100%;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     border-collapse: collapse;
 }
 
 tbody tr:nth-child(even) {
-    background-color: var(--post-bg);
 }
 
 tbody tr:nth-child(odd) {
-    background-color: var(--post-bg);
+    background-color: #1a1e30;
 }
 
 td,
@@ -159,6 +159,7 @@ th {
 .post-nav {
     margin-top: 1rem;
     padding: 0.5rem;
+    margin-bottom: 2rem;
     border: 0.1rem solid var(--border);
 }
 
@@ -249,7 +250,7 @@ code {
 .codeblock,
 code,
 pre {
-    background-color: var(--post-bg);
+    background-color: #1a1e30;
 }
 
 pre {
@@ -260,18 +261,12 @@ pre {
 .highlight {
     padding-left: 0.2rem;
     padding-right: 0.2rem;
-    background-color: var(--post-bg);
+    margin-bottom: 0.5rem;
+    background-color: #1a1e30;
     overflow-x: auto;
 
     * {
-        background-color: var(--post-bg) !important;
-    }
-
-    span[style*="background-color"] {
-        background-color: var(--post-bg) !important;
-    }
-    span[style*="background-color"] span {
-        background-color: var(--post-bg) !important;
+        background-color: #1a1e30 !important;
     }
 }
 
