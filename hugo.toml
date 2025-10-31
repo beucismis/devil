@@ -2,3 +2,6 @@
   [module.hugoVersion]
     extended = true
     min = '0.151.0'
+
+[outputs]
+  home = ["HTML", "RSS"]
