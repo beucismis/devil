@@ -6,6 +6,17 @@
        title="{{ .name }}">{{ .name }}</a>
     {{ end }}
 </div>
+<p>Last updated on {{ .Site.Lastmod.Format "02 Jan 2006" }}</p>
 <p>
-    © {{ now.Year }}. All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/beucismis/devil">Devil</a> Theme
+    © {{ now.Year }} {{ if .Site.Params.author }}{{ .Site.Params.author }}{{ end }}
+    -
+    {{ if .Site.Params.license }}
+        {{ if .Site.Params.license }}
+            <a href="{{ .Site.Params.license_url }}">{{ .Site.Params.license }}</a>
+        {{ else }}
+            {{ .Site.Params.license }}
+        {{ end }}
+    {{ end }}
+    -
+    Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/beucismis/devil">Devil</a> Theme
 </p>
