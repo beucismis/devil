@@ -1,10 +1,12 @@
-baseURL = 'https://example.org'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'devil'
+baseURL = "/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "devil"
 
-[pagination]
-  pagerSize = 10
+[params]
+  author = "Demo Author"
+  license = "GNU GPL"
+  license_url = "/"
 
 [[menu.main]]
 name = "Home"
